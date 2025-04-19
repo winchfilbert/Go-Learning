@@ -1,12 +1,13 @@
 package main
 
 import (
+	"fmt"
+	"io"
 	"io/ioutil"
 	"main/handler"
+	"net"
 	"os"
 	"path/filepath"
-	"fmt"
-	"net"
 )
 
 func main() {
@@ -45,10 +46,19 @@ func main() {
 func handleClient(conn net.Conn){
 	//handling with the 1 method, conn.read, static allocation, reading
 	defer conn.Close();
-	buf :=  make([]byte,1024);
-	n, err := conn.Read(buf);
+	buf := make([]byte,1024);
+
+	for{
+		n, err := conn.Read(buf);
+		if err != nil {
+			if err == io.EOF{
+				fmt.Println("Client is done sending the message");
+				return
+			}
+		}
 	handler.ErrorHandler(err);
 
+	
 	fmt.Printf("Received from client: %s\n", string(buf[:n]))
 
     // handling write with as long as the buf
@@ -57,4 +67,5 @@ func handleClient(conn net.Conn){
     
     // Log that we sent a response
     fmt.Printf("Sent response to client: %s\n", string(buf[:n]))
+	}
 }
