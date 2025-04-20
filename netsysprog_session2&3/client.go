@@ -12,7 +12,7 @@ func main(){
     return
   }
 
-  //for method 1 and method 2, please know that the conn.write works
+  //for method 1 and method 2, we can work with the conn.write wmethod
   // // the data sending for request simulation
   // conn.Write([]byte("filbert"))
 
@@ -33,5 +33,5 @@ func main(){
   // for the method 3 works: go run client.go && payload.go cuz the writeto is the payload.go function
 
   // closing connection
-  defer conn.Close() // after all the code, ran close the conn
+  defer conn.Close() // after all the code, close the conn (the connection)
 }
