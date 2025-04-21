@@ -12,7 +12,7 @@ import (
 func main(){
 	dir, err := ioutil.TempDir("", "datagram_session7");
 	handler.ErrorHandler(err);
-	fmt.Println("Temp dir: %s\n", dir);
+	fmt.Printf("Temp dir: %s\n", dir);
 
 
 // if the directory done used, 
@@ -23,7 +23,7 @@ func main(){
 	}()
 
 	// making server socket file
-	socket := filepath.Join(dir, fmt.Sprintf("d.sock", os.Getpid()))
+	socket := filepath.Join(dir, fmt.Sprintf("%d.sock", os.Getpid()))
 	listener, err := net.ListenPacket("unixgram",socket)
 	handler.ErrorHandler(err)
 	fmt.Printf("Listening at: %s\n", listener.LocalAddr())
@@ -51,3 +51,5 @@ func main(){
 	}
 
 }
+
+//N3xtG3nC0mput1ng

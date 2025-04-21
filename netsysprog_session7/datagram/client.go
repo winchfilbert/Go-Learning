@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"main/handler"
 	"net"
 	"os"
@@ -12,9 +11,10 @@ import (
 
 func main(){
 	tempDir := ``;
+	tempSocketFile := ``;
 	// we're making own socket for client
 	clientSocket := filepath.Join(tempDir, fmt.Sprintf("client: %d.sock", os.Getpid()));
-	serverAddr,err :=  net.ResolveUnixAddr("unixgram", tempDir);
+	serverAddr,err :=  net.ResolveUnixAddr("unixgram", tempSocketFile);
 	handler.ErrorHandler(err)
 	listener, err := net.ListenPacket("unixgram", clientSocket);
 	handler.ErrorHandler(err);
