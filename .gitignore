@@ -1,0 +1,7 @@
+path/to/cert.pem
+path/to/key.pem
+*.pem
+cert.pem
+key.pem
+*.crt
+*.key

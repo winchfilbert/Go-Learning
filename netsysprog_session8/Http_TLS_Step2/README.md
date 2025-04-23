@@ -7,9 +7,8 @@ Teasers:
 - although the simple http server and http tls code is slightly different
 notice that i've change the port from 5555 to 5556, so that the simple http server can run without the port being reserved with certificate, that requires for the client to request with https
 - link to mkcert download : https://github.com/FiloSottile/mkcert
-- here is the things that happen:
-when you try to run the command 
-mkcert localhost 127.0.0.1
+- you need to run this command:
+
 mkcert localhost 127.0.0.1
 Note: the local CA is not installed in the system trust store.
 Run "mkcert -install" for certificates to be trusted automatically ⚠️
