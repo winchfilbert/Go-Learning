@@ -10,6 +10,8 @@ notice that i've change the port from 5555 to 5556, so that the simple http serv
 - you need to run this command:
 
 <code>mkcert localhost 127.0.0.1</code>
+
+
 Note: the local CA is not installed in the system trust store.
 Run "mkcert -install" for certificates to be trusted automatically ⚠️
 
