@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Code/go_learning/netsysprog_session8/handlers"
+	"main/handlers"
 	"fmt"
 	"net/http"
 )

@@ -59,7 +59,7 @@ func main(){
       // }
   
 
-      // if this for some reason you've put up \n, yep the only text that will show is before that \n 
+      // if in the function above, you've didn't put up \n, the only text that will show is before that \n 
       // so what we're actually doin is the function that for as long it can scan print 
       // fmt.Println(scanner.Text()) // output the scanner string
 
