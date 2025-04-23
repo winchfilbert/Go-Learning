@@ -21,11 +21,8 @@ func main(){
 		Age: 20,
 	}
 	json.NewEncoder(buffer).Encode(&user)
-	// this is for method get
-	// resp, err := http.Get("http://localhost:5555/index")
-
+	
 	// this is example for method post, this is intended to test
-	// if the method of server is wrong, it outputs "Method Wrong"
 	resp, err := http.Post("http://localhost:5555/sendData", "application/json", buffer)
 
 	if err != nil{
@@ -35,6 +32,7 @@ func main(){
 
 	// if you did somehow uncomment this line below, it just give raw type.,. 
 	// data.readall(io)
+	
 	data, err := io.ReadAll(resp.Body)
 
 	if err != nil{
