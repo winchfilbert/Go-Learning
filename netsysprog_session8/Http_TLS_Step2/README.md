@@ -9,7 +9,7 @@ notice that i've change the port from 5555 to 5556, so that the simple http serv
 - link to mkcert download : https://github.com/FiloSottile/mkcert
 - you need to run this command:
 
-mkcert localhost 127.0.0.1
+<code>mkcert localhost 127.0.0.1</code>
 Note: the local CA is not installed in the system trust store.
 Run "mkcert -install" for certificates to be trusted automatically ⚠️
 
