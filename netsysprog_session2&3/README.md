@@ -9,6 +9,6 @@ session 3 : TCP / UDP
 
 
 
-this code i think is to teach how does shakehand works from the theory explained, by learing how
+this code i think is to teach how does shakehand works from the theory explained, by learning how
 the client and server interacts, server as that the one who awaits another connection and serve, and client
 as the requester of the connection
